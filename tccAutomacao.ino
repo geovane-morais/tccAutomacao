@@ -15,7 +15,7 @@ double tempoESTIMADO=10;              //tempo de desligar o ferro em minutos
 
 double atualizacao=0,on_off=0,b=0;    //variaveis para o max6675
 double taxa=220;                      // tempo para verificar o termo par em milisegundos
-int j=0;
+int j=0;                              //variavel para tirar bug do display
  
 double SetPoint, error=0;                              //
 double aggKp=10,aggKi=0,aggKd=0;                       //parametros
@@ -49,8 +49,7 @@ void loop(){
 
 int setpoint()
 {
- SetPoint = analogRead(A4);
- SetPoint = (210 * SetPoint /1023) +100;
+ SetPoint = (210 * analogRead(A4) /1023) +100;
  
  if ((SetPoint-Setpoint) <= 2.7 && (SetPoint-Setpoint) >= -2.7); //este if serve para tirar
  else Setpoint = SetPoint;                                       //o ruido do potenciometro
