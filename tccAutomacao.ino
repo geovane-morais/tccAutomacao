@@ -39,7 +39,8 @@ void setup()
   delay(1000);                        //delay para iniciar o programa
 }
 
-void loop(){  
+void loop()
+{  
   temporizador();                     //função do Tempo para desligar o ferro de solda 
   setpoint();                         //função do Setpoint
   pid();                              //função para o PID
