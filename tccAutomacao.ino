@@ -137,7 +137,7 @@ int temporizador()
   
   return (segundos,milisegundos,FERROparado,on_off); 
 }
-/* (FUNÇÃO para o Monitor Serial) =======================================================================================*/
+/* (FUNÇÃO para o Monitor Serial) ========================================================================*/
 int pid()
 {
   error = Setpoint-temperatura;
